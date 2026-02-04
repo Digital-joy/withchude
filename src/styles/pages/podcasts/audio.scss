@@ -1,0 +1,490 @@
+.Aud__wrapper,
+.noaudio {
+  width: 100%;
+  background-color: #000000;
+  height: 8.7rem;
+  overflow: hidden;
+  margin-top: 2.9rem;
+  border-radius: 1.6rem;
+  position: fixed;
+  z-index: 100;
+  width: 114.8rem;
+  bottom: 0rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  // display: none !important;
+  @include media("<phone") {
+    margin-top: -3.5rem;
+    height: 6.1rem;
+    width: 34.6rem;
+    pointer-events: none;
+    * {
+      pointer-events: all;
+    }
+
+    &:hover {
+      height: 40.5rem;
+
+      &::after {
+        top: 1.6rem;
+        left: 2.1rem;
+        width: 30.3rem;
+        height: 19.2rem;
+        border-radius: 1.2rem;
+      }
+
+      .vjs-control-bar {
+        height: 40.5rem !important;
+      }
+
+      .vjs-play-control {
+        display: block !important;
+        bottom: 3.5rem !important;
+        top: unset !important;
+        left: 15.838rem !important;
+      }
+
+      .vjs-skip-backward-10 {
+        display: block !important;
+        bottom: 3.5rem !important;
+        top: unset !important;
+        left: 8rem !important;
+      }
+
+      .vjs-skip-forward-10 {
+        display: block !important;
+        bottom: 3.5rem !important;
+        top: unset !important;
+        left: unset !important;
+        right: 8rem !important;
+      }
+
+      .vidtagWrapper {
+        top: 22.2rem !important;
+        transform: unset !important;
+        text-align: center;
+        width: 26.2rem !important;
+        left: 4.2rem !important;
+        display: block !important;
+      }
+
+      .vjs-progress-control {
+        top: 30.1rem !important;
+        display: block !important;
+        left: 5.8rem !important;
+        width: 22.5rem !important;
+      }
+
+      .vjs-current-time {
+        transform: translateY(-50%) !important;
+        right: 29.7rem !important;
+        top: unset !important;
+        bottom: 9.1rem !important;
+        position: absolute !important;
+        display: block !important;
+        height: auto;
+        padding: unset;
+        font-family: "Euclid Circular A" !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        font-size: 1.2rem !important;
+        line-height: 105.3% !important;
+        letter-spacing: -0.02em !important;
+        color: #ffffff !important;
+      }
+
+      // .vjs-duration.vjs-time-control.vjs-control {
+      //   transform: translateY(-50%) !important;
+      //   left: 29.3rem !important;
+      //   top: unset !important;
+      //   bottom: 9.1rem !important;
+      //   position: absolute !important;
+      //   display: block !important;
+      //   height: auto;
+      //   padding: unset;
+      //   font-family: "Euclid Circular A" !important;
+      //   font-style: normal !important;
+      //   font-weight: 500 !important;
+      //   font-size: 1.2rem !important;
+      //   line-height: 105.3% !important;
+      //   letter-spacing: -0.02em !important;
+      //   color: #ffffff !important;
+      //   gap: 4rem;
+      // }
+    }
+  }
+
+  video {
+    display: none !important;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6.5rem;
+    height: 6.5rem;
+    left: 1.1rem;
+    top: 1.1rem;
+    background: #f8a519;
+    border-radius: 0.8rem;
+    z-index: 20;
+    @include media("<phone") {
+      width: 3.896rem;
+      height: 3.896rem;
+      left: 1rem;
+    }
+  }
+
+  .vjs-big-play-button {
+    display: none !important;
+  }
+
+  .vjs-play-control {
+    width: 2.864rem !important;
+    height: 2.864rem !important;
+    position: absolute !important;
+    left: 56.024rem !important;
+    top: 2.9rem !important;
+    background-color: transparent !important;
+    border: unset !important;
+    border-radius: none !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+    @include media("<phone") {
+      width: 2.064rem !important;
+      height: 2.064rem !important;
+      right: 1.836rem !important;
+      top: 2.018rem !important;
+      left: unset !important;
+    }
+    svg:nth-of-type(1) {
+      display: block;
+    }
+    svg:nth-of-type(2) {
+      display: none;
+    }
+
+    &.vjs-playing {
+      svg:nth-of-type(2) {
+        display: block;
+      }
+      svg:nth-of-type(1) {
+        display: none;
+      }
+    }
+  }
+
+  .vjs-skip-backward-10 {
+    width: 2.864rem !important;
+    height: 2.864rem !important;
+    position: absolute !important;
+    left: 50rem !important;
+    top: 2.9rem !important;
+    background-color: transparent !important;
+    border: unset !important;
+    border-radius: none !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+    @include media("<phone") {
+      display: none !important;
+    }
+  }
+
+  .vjs-skip-forward-10 {
+    width: 2.864rem !important;
+    height: 2.864rem !important;
+    position: absolute !important;
+    left: 62.047rem !important;
+    top: 2.9rem !important;
+    background-color: transparent !important;
+    border: unset !important;
+    border-radius: none !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+    @include media("<phone") {
+      display: none !important;
+    }
+  }
+
+  .vjs-volume-panel {
+    display: none !important;
+  }
+
+  .vjs-volume-control {
+    display: none !important;
+  }
+
+  .Vid__comments {
+    display: none !important;
+  }
+
+  .Vid__add {
+    display: none !important;
+  }
+
+  .Vid__share {
+    width: 2.4rem !important;
+    height: 2.4rem !important;
+    right: 2.6rem !important;
+    top: 3.2rem !important;
+    position: absolute !important;
+    z-index: 80;
+    cursor: pointer;
+    @include media("<phone") {
+      display: none !important;
+    }
+  }
+
+  .Vid__Share__wrapper {
+    background: rgba(217, 217, 217, 0.01);
+    backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.5rem);
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 678;
+  }
+
+  .Vid__Share {
+    z-index: 10;
+    position: absolute;
+    width: 67.7rem;
+    height: 26.3rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #0c0c0f;
+    border-radius: 2.5rem;
+    padding: 2.1rem 2.5rem 2.7rem 2.6rem;
+    overflow: hidden;
+    z-index: 20;
+
+    div {
+      gap: 1.9rem;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 4.8rem;
+
+      svg {
+        width: 5.5rem;
+        height: 5.5rem;
+        padding: 1.25rem;
+        background-color: #191919;
+        border-radius: 50%;
+      }
+    }
+
+    h4 {
+      font-family: "Nohemi";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 99.01%;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 50.2rem;
+        height: 0.2rem;
+        background-color: #141414;
+        top: 6.5rem;
+        left: -5.8rem;
+      }
+    }
+
+    & > figure {
+      width: 2.4rem;
+      height: 2.4rem;
+      top: 2.1rem;
+      right: 2.5rem;
+      position: absolute;
+      cursor: pointer;
+    }
+
+    p {
+      margin-top: 4.2rem;
+      width: 62.6rem;
+      height: 4.6rem;
+      background: #191919;
+      border: 0.1rem solid #282828;
+      border-radius: 1.2rem;
+      padding: 1.5rem 1.8rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.14;
+      display: flex;
+      align-items: center;
+      font-feature-settings: "zero" on;
+      color: #f8f9f9;
+      position: relative;
+      white-space: pre;
+      margin-right: 2rem;
+
+      i {
+        overflow: hidden;
+        width: 95%;
+      }
+    }
+
+    svg {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+
+    button {
+      position: absolute;
+      right: 0.7rem;
+      top: 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5.4rem;
+      height: 3.3rem;
+      background: #f8a519;
+      border-radius: 0.8rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.14;
+      display: flex;
+      align-items: center;
+      font-feature-settings: "zero" on;
+      color: #ffffff;
+    }
+  }
+
+  .vidtagWrapper {
+    position: absolute !important;
+    left: 10.7rem !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    max-height: 3.4rem !important;
+    width: 34.3rem !important;
+    overflow: hidden;
+    z-index: 20 !important;
+    cursor: pointer !important;
+    display: flex;
+    @include media("<phone") {
+      left: 5.9rem !important;
+      top: 3.05rem !important;
+      width: 20.4rem !important;
+      max-height: 3rem !important;
+    }
+
+    h3 {
+      font-family: "Euclid Circular A";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 105.26%;
+      color: #ffffff;
+      @include media("<phone") {
+        font-size: 1.4rem !important;
+      }
+    }
+  }
+
+  .vjs-remaining-time {
+    display: none !important;
+  }
+
+  .vjs-progress-control {
+    width: 24.3rem !important;
+    height: auto !important;
+    position: absolute !important;
+    right: 14rem !important;
+    top: 4.35rem !important;
+    background-color: transparent !important;
+    border: unset !important;
+    border-radius: none !important;
+    z-index: 20 !important;
+    cursor: pointer !important;
+    padding: unset !important;
+    border-radius: 10rem !important;
+    display: flex !important;
+    @include media("<phone") {
+      display: none !important;
+    }
+
+    & > div {
+      background-color: #7a7a7a !important;
+      margin: unset !important;
+      border-radius: 10rem !important;
+    }
+
+    .vjs-load-progress {
+      background-color: #ffffff !important;
+      border-radius: 10rem !important;
+    }
+
+    .vjs-play-progress {
+      background-color: #f8a519 !important;
+      border-radius: 10rem !important;
+      * {
+        background-color: #f8a519 !important;
+        border-radius: 50%;
+        svg {
+          display: none;
+        }
+      }
+      .vjs-time-tooltip {
+        bottom: unset !important;
+        transform: translateX(-100%) !important;
+        right: unset !important;
+        display: block !important;
+        visibility: visible !important;
+        background-color: transparent !important;
+        color: #ffffff;
+        width: auto !important;
+        height: auto !important;
+        position: absolute !important;
+        left: -1.2rem !important;
+        top: -0.7rem !important;
+        background-color: transparent !important;
+        border: unset !important;
+        border-radius: none !important;
+        z-index: 20 !important;
+        cursor: pointer !important;
+        font-family: "Euclid Circular A" !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        font-size: 1.4rem !important;
+        line-height: 105.3% !important;
+        letter-spacing: -0.02em !important;
+        color: #ffffff !important;
+        padding: 0 !important;
+        &:after {
+          content: attr(data-length);
+          position: absolute;
+          right: -27rem;
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
+
+  .vjs-fullscreen-control,
+  .vjs-picture-in-picture-control {
+    display: none !important;
+  }
+
+  .vjs-control-bar {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -26.3%, rgba(0, 0, 0, 0.7) 100%) !important;
+    height: 8.7rem !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+}

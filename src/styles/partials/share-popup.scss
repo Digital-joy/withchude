@@ -1,0 +1,87 @@
+.Share_Popup {
+    .Popup__wrapper {
+        height: fit-content;
+        // width: 100%;
+    }
+
+    .Support_Popup__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+    }
+    &__heading {
+        height: fit-content;
+        @include media("<phone") {
+            margin-top: 3rem;
+        }
+    }
+    &__content {
+        display: block;
+        flex: 1 1 0%;
+        overflow: scroll;
+        margin-top: 2rem;
+        p {
+            width: 100% !important;
+        }
+    }
+
+    .socials {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1.75rem;
+        margin-top: 2.5rem;
+        padding: 1rem;
+        @include media("<phone") {
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            margin-top: 4rem;
+        }
+
+        .social {
+            @extend .scale-1\.2;
+            grid-column: span 1 / span 1;
+            border-radius: 35%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 1.25rem;
+            background: white;
+
+            &__icon {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.share_and_subscribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start !important;
+    column-gap: 1.5rem;
+    &.mt {
+        margin-top: 2.5rem;
+    }
+}
+.Share_Button, .Subscribe_Button {
+    @extend .Nav__cta;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-wrap: nowrap;
+    @include media("<phone") {
+      display: flex !important;
+    }
+
+    path {
+        stroke: #090908 !important;
+    }
+
+    &:hover {
+        path {
+            stroke: white !important;
+        }
+    }
+}

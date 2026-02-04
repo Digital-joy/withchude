@@ -1,0 +1,103 @@
+.VideoSection {
+  color: #ffffff;
+  // margin-top: -3rem;
+
+  h4 {
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    display: flex;
+    gap: 1.1rem;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      width: 8.7rem;
+      height: 1.4rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 0.8;
+      letter-spacing: -0.02em;
+      color: #aaaaaa;
+      align-items: center;
+    }
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}
+
+.VideoSection__videos__wrapper {
+  position: relative;
+  &:hover .left,
+  &:hover .right {
+    opacity: 1;
+  }
+}
+
+.VideoSection__videos {
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 2rem;
+  overflow: scroll;
+  width: 131.9rem;
+  padding-right: 6rem;
+
+  // & > *:last-of-type {
+  //   margin-right: 12rem;
+  // }
+
+  @include media("<phone") {
+    gap: 1.788rem;
+    overflow: scroll;
+    width: 36.7rem;
+    margin-top: 1.5rem;
+    padding: unset;
+    // overflow: scroll;
+    // width: 100vw;
+    // padding-right: 4.962rem;
+
+    & > *:last-of-type {
+      margin-right: 2.3rem;
+    }
+  }
+}
+
+.VideoSection__nav {
+  position: absolute;
+  width: 136.5rem;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  left: -4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  pointer-events: none;
+  @include media("<phone") {
+    display: none;
+  }
+
+  div {
+    width: 7rem;
+    height: 100%;
+    background-color: #0c0c0faa;
+    display: grid;
+    place-content: center;
+    pointer-events: all;
+    opacity: 0;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  svg {
+    width: 5rem;
+  }
+}

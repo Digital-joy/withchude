@@ -1,0 +1,449 @@
+[data-template="payment"] {
+  .FooterLite::after {
+    background-color: #f5f5f5;
+  }
+}
+
+.__payment {
+  padding-top: 9.6rem;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  position: relative;
+  @include media("<phone") {
+    padding-top: 5.5rem;
+  }
+
+  .Vid__added {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 1rem;
+    position: fixed;
+    z-index: 100;
+    height: 4.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10rem;
+    background: #252527;
+    border-radius: 1.6rem;
+    @include media("<phone") {
+      width: max-content;
+      transform: translateX(-50%) scale(0.75);
+    }
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    p {
+      font-family: "Euclid Circular A";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+  }
+}
+
+.payment__body {
+  padding: 3.7rem 12rem 11.6rem;
+  display: flex;
+  gap: 2.2rem;
+  @include media("<phone") {
+    padding: 0.8rem 2.3rem 8.17rem 2.3rem;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+}
+
+.payment__body__left {
+  height: 40.7rem;
+  background: #ffffff;
+  border-radius: 1.6rem;
+  padding: 3.5rem 3rem;
+  width: 60.9rem;
+  @include media("<phone") {
+    width: 34.5rem;
+    padding: 3rem 2.3rem 2.7rem;
+  }
+
+  h2 {
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+  }
+
+  p {
+    margin-top: 1.5rem;
+    width: 50.5rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 105.26%;
+    color: #353535;
+    @include media("<phone") {
+      width: unset;
+      font-size: 1.4rem;
+      width: 27.8rem;
+    }
+  }
+
+  a {
+    color: #090908;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 2.2rem;
+    @include media("<phone") {
+      margin-top: 2rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  li {
+    display: flex;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 105.26%;
+    color: #575757;
+    align-items: center;
+    gap: 0.9rem;
+    @include media("<phone") {
+      font-size: 1.4rem;
+    }
+  }
+
+  svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    @include media("<phone") {
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+  }
+}
+
+.payment__body__right {
+  width: 56.8rem;
+  height: auto;
+  background: #ffffff;
+  border-radius: 1.6rem;
+  padding: 3.5rem 3rem;
+  display: grid;
+  position: relative;
+  align-content: flex-start;
+  @include media("<phone") {
+    width: 34.5rem;
+    padding: 3rem 2.3rem 2.7rem;
+  }
+
+  h2 {
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+    margin-bottom: 2.2rem;
+  }
+
+  label,
+  p {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.02em;
+    color: #2e2e2e;
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    margin-bottom: 2.2rem;
+  }
+
+  & > input {
+    display: flex;
+    padding: 1.6rem;
+    width: 49.8rem;
+    height: 4.8rem;
+    border: 0.1rem solid #efefef;
+    border-radius: 0.8rem;
+    // font-family: "Euclid Circular A";
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    // font-size: 1.6rem;
+    font-size: 16px;
+    // line-height: 2rem;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #2e2e2e;
+    margin-bottom: 1.5rem;
+    &:placeholder-shown {
+      color: #b9b9b9;
+    }
+    @include media("<phone") {
+      width: 30rem;
+    }
+  }
+
+  .StripeElement {
+    background-color: transparent;
+    padding: 1.6rem;
+    width: 49.8rem;
+    height: 4.8rem;
+    max-width: unset;
+    border: 0.1rem solid #efefef;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    @include media("<phone") {
+      width: 30rem;
+    }
+  }
+  // .StripeElement--empty {
+  //   border-bottom-color: #b22222;
+  // }
+  // .StripeElement--focus {
+  //   border-bottom-color: #008000;
+  // }
+
+  /* Set styling when form field data is invalid */
+  .StripeElement--invalid {
+    background-color: #ffd90080;
+    border-color: #b22222;
+  }
+
+  /* Set styling when form field data is completed and valid */
+  .StripeElement--complete {
+    background-color: #00800015;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49.8rem;
+    height: 4.8rem;
+    background: #f8a519;
+    border-radius: 0.8rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    @include media("<phone") {
+      width: 30rem;
+    }
+  }
+}
+
+.payment__switch {
+  font-family: "Euclid Circular A";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.02em;
+  color: #2e2e2e;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 2.2rem;
+  max-width: 98%;
+  @include media("<phone") {
+    max-width: 100%;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  p {
+    transition: 0.2s ease-out;
+    cursor: pointer;
+  }
+
+  article, .payment_option {
+    width: 50%;
+    display: inline-flex;
+    padding: 1.9rem 1.7rem 1.8rem;
+    align-items: flex-end;
+    gap: 0.4rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #efefef;
+    cursor: pointer;
+    // flex: 1;
+    align-items: center;
+    gap: 1.6rem;
+
+    &.flex-1 {
+      flex: 1;
+    }
+    &.full-width {
+      width: 100%;
+      & > div {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+        align-items: center;
+        flex: 1;
+
+        p {
+          grid-column: span 2 / span 2;
+        }
+
+        h4 {
+          justify-self: end;;
+        }
+      }
+
+      @include media(">phone") {
+      }
+    }
+    @include media("<phone") {
+      width: 100%;
+      padding: 1.3rem 2.1rem 1.6rem 1.1rem;
+      gap: 1.81rem;
+      border-radius: 0.6rem;
+      & > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+      }
+    }
+    &.active {
+      border: 0.1rem solid #f8a519;
+      background: #f5ecdd;
+
+      em {
+        border: 0.1rem solid #f8a519;
+        @include media("<phone") {
+          border-width: 0.064rem;
+        }
+      }
+
+      em::after {
+        content: "";
+        width: 1.9rem;
+        height: 1.9rem;
+        background-color: #f8a519;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        @include media("<phone") {
+          width: 1.217rem;
+          height: 1.217rem;
+        }
+      }
+    }
+  }
+
+  em {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.119rem solid #efefef;
+    border-radius: 50%;
+    position: relative;
+    @include media("<phone") {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-width: 0.064rem;
+    }
+  }
+
+  aside {
+    width: 4.4rem;
+    height: 2.1rem;
+    background: #f8a519;
+    border-radius: 2.3rem;
+    position: relative;
+    padding: 0.2rem;
+    cursor: pointer;
+  }
+
+  h5 {
+    color: #2e2e2e;
+    font-family: "Euclid Circular A";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.028rem;
+    @include media("<phone") {
+      font-size: 1.2rem;
+      letter-spacing: -0.024rem;
+    }
+  }
+
+  h4 {
+    margin-top: 0.8rem;
+    color: #2e2e2e;
+    font-family: "Euclid Circular A";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.028rem;
+    @include media("<phone") {
+      font-size: 1rem;
+      letter-spacing: -0.02rem;
+    }
+    i {
+      color: #090908;
+      font-family: Nohemi;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 99.012%; /* 1.9802rem */
+      letter-spacing: -0.04rem;
+      @include media("<phone") {
+        font-size: 1.2811rem;
+        letter-spacing: -0.0256rem;
+      }
+      &.slashed {
+        text-decoration: line-through;
+        color: #333;
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+        @include media("<phone") {
+          font-size: 1rem;
+        }
+      }
+    }
+    white-space: pre;
+  }
+
+  span {
+    position: absolute;
+    width: 1.675rem;
+    height: 1.675rem;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: 0.2s ease-out;
+  }
+}

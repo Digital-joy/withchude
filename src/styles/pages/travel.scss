@@ -1,0 +1,492 @@
+.__travel {
+  background-color: #ffffff;
+  position: fixed;
+  margin-top: 9.1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include media("<phone") {
+    margin-top: 6.79rem;
+  }
+}
+
+.travel__header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 9.1rem;
+  background-color: #ffffff;
+  z-index: 20;
+  @include media("<phone") {
+    height: 6.79rem;
+  }
+
+  button {
+    display: flex;
+    background-color: transparent;
+    gap: 0.4rem;
+    color: #090908;
+    font-family: "Euclid Circular A";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.028rem;
+    position: absolute;
+    top: 4.2rem;
+    left: 12rem;
+    @include media("<phone") {
+      color: transparent;
+      left: 2.3rem;
+      top: 2.5rem;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  .Nav__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10.9rem;
+    height: 3.7rem;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.travel__body {
+  // padding-bottom: 9.6rem * 2;
+
+  h1 {
+    color: #090908;
+    font-family: Nohemi;
+    font-size: 3.2143rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 99.012%; /* 3.1825rem */
+    letter-spacing: -0.0643rem;
+    padding-left: 12rem;
+    max-width: 54.3rem;
+    padding-bottom: 0.8rem;
+    @include media("<phone") {
+      font-size: 2rem;
+      padding: 2.3rem;
+      max-width: 30rem;
+      padding-bottom: 0.2rem;
+    }
+  }
+}
+
+.travel__left {
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 2000;
+  height: 100%;
+  padding: 2.8rem 10.2rem 0rem 12rem;
+  transition: 0.2s ease-out;
+  width: 83.2rem;
+  transform: translateX(-83.2rem);
+  @include media("<phone") {
+    width: 100%;
+    padding: 2.8rem 2.7rem 0;
+    transform: translateY(100vh);
+    top: 18.5rem;
+  }
+  &.side {
+    transform: translate(0rem);
+  }
+  &.full {
+    transform: translate(0rem);
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 25rem;
+    overflow: scroll;
+    position: relative;
+    top: 0;
+    ul {
+      height: unset;
+      padding-bottom: 5rem;
+      margin-top: 1.4rem;
+    }
+    h2 {
+      color: #090908;
+      letter-spacing: unset;
+      font-family: "Euclid Circular A";
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 105.264%;
+      margin-top: 0.4rem;
+      margin-inline: -1rem;
+      font-family: "Nohemi";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2.2rem;
+      line-height: 99.01%;
+      letter-spacing: -0.02em;
+      color: #090908;
+      max-width: 111rem;
+    }
+    hr {
+      width: 100%;
+      height: 0;
+      border: 0.1rem solid #f5f5f5;
+      margin-top: 1.6rem;
+    }
+
+    &._films {
+      div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3.1rem 2.7rem;
+        gap: 5.1rem;
+        width: 120rem;
+        background: #ffffff;
+        border-radius: 2.4rem;
+        margin-top: 3.1rem;
+        @include media("<phone") {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        p {
+          font-family: "Euclid Circular A";
+          white-space: pre-line;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 135.94%;
+          leading-trim: both;
+          text-edge: cap;
+          letter-spacing: -0.02em;
+          color: #787878;
+          margin: 1.4rem 0 0;
+          max-width: 92.5rem;
+          @include media("<phone") {
+            margin: 1.6rem 0;
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      .ctas {
+        width: unset;
+        gap: 0rem;
+        padding: 0;
+        margin: 0;
+
+        a {
+          text-decoration: none !important;
+          @extend %watch;
+          padding: 1rem;
+          width: max-content;
+          margin-top: 2rem;
+          transform: scale(calc(1 / 1.2));
+          transform-origin: 0% 0%;
+          @include media("<phone") {
+            transform: unset;
+          }
+        }
+      }
+
+      button {
+        padding: 1rem;
+        width: max-content;
+        margin-top: 2rem;
+        transform: scale(calc(1 / 1.2));
+        transform-origin: 0% 0%;
+        @include media("<phone") {
+          transform: unset;
+        }
+      }
+
+      img {
+        width: 15.269rem;
+        height: 22.9rem;
+        background-color: #f8a519;
+        border-radius: 1.6rem;
+        overflow: hidden;
+        @include media("<phone") {
+          // display: none;
+          margin-bottom: -2.4rem;
+          width: 100%;
+          height: auto;
+          background-color: transparent;
+        }
+      }
+
+      h4 {
+        font-family: "Euclid Circular A";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 135.94%;
+        leading-trim: both;
+        text-edge: cap;
+        letter-spacing: -0.02em;
+        color: #787878;
+        align-items: center;
+        margin-top: 0;
+        @include media("<phone") {
+          font-size: 1.6rem;
+          gap: 0.8rem;
+        }
+
+        & + h4 {
+          margin-top: 6.9rem;
+        }
+
+        span {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          width: 13.1rem;
+          height: 3.3rem;
+          background: #f8a519;
+          border-radius: 1rem;
+          color: #ffffff;
+          @include media("<phone") {
+            border-radius: 2.7rem;
+            font-size: 1.3rem;
+            width: 10rem;
+            height: 2.93rem;
+          }
+        }
+      }
+
+      a {
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+      }
+
+      h3 {
+        margin: 1rem 0 0;
+        font-family: "Nohemi";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.2rem;
+        line-height: 99.01%;
+        letter-spacing: -0.02em;
+        color: #090908;
+        @include media("<phone") {
+          margin-top: 0;
+        }
+      }
+
+      h2 {
+        margin: 3.7rem 0 1.4rem;
+        font-family: "Nohemi";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.2rem;
+        line-height: 99.01%;
+        letter-spacing: -0.02em;
+        color: #090908;
+        max-width: 111rem;
+      }
+
+      h3 ~ h3 {
+        margin-top: 6.4rem;
+        @include media("<phone") {
+          margin-top: 4rem;
+        }
+      }
+
+      figure {
+        display: grid;
+        grid-template-columns: repeat(5, 20.3rem);
+        justify-content: space-between;
+        margin-top: 1.7rem;
+        @include media("<phone") {
+          grid-template-columns: repeat(2, 15rem);
+          gap: 1.5rem;
+          justify-content: flex-start;
+        }
+
+        span {
+          width: 20.3rem;
+          height: 7.4rem;
+          background-color: #ffffff;
+          display: block;
+          border-radius: 1.6rem;
+          @include media("<phone") {
+            width: 15rem;
+            height: 5.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  h2 {
+    color: #090908;
+    font-family: Nohemi;
+    font-size: 3.2143rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 99.012%; /* 3.1825rem */
+    letter-spacing: -0.0643rem;
+    @include media("<phone") {
+      font-size: 2rem;
+    }
+  }
+
+  ul {
+    margin-top: 3.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    overflow: scroll;
+    height: 100vh;
+    padding-bottom: 35rem;
+    @include media("<phone") {
+      margin-top: 1.7rem;
+      padding-bottom: 50rem;
+    }
+
+    p {
+      color: #606060;
+      font-family: "Euclid Circular A";
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 105.264%;
+      margin-top: 0.4rem;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media("<phone") {
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 0.1rem;
+        width: 100%;
+        background: #f5f5f5;
+        bottom: -1.6rem;
+      }
+    }
+
+    a {
+      @extend %watch;
+      width: unset;
+      padding-inline: 1.6rem;
+      min-width: 11rem;
+      font-size: 1.4rem;
+
+      &.soon {
+        border-radius: 0.6606rem;
+        background: #f9f9f9;
+        color: #606060;
+        pointer-events: none;
+      }
+    }
+  }
+
+  h4 {
+    color: #272727;
+    font-family: "Euclid Circular A";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105.264%; /* 1.6842rem */
+  }
+}
+
+.travel__footer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  height: 8.8rem;
+  background-color: #000000;
+  z-index: 20;
+  @include media("<phone") {
+    height: 6.79rem;
+  }
+
+  button {
+    display: flex;
+    background-color: transparent;
+    gap: 0.4rem;
+    color: #090908;
+    font-family: "Euclid Circular A";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.028rem;
+    position: absolute;
+    top: 4.2rem;
+    left: 12rem;
+    @include media("<phone") {
+      color: transparent;
+      left: 2.3rem;
+      top: 2.5rem;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  .Nav__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10.9rem;
+    height: 3.7rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .Footer__footer {
+    gap: 52.1rem;
+    height: unset;
+    @include media("<phone") {
+      gap: 1rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1.5rem !important;
+    }
+  }
+  .Footer__footer__links {
+    @include media("<phone") {
+      display: flex;
+      font-size: 1.1rem;
+      gap: 0.8rem;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.travel__footer__before {
+  height: auto;
+  bottom: 99.9%;
+  position: absolute;
+  left: -0.1rem;
+  right: -0.1rem;
+  width: 100.1%;
+}

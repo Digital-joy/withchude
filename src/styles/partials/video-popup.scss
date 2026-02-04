@@ -1,0 +1,164 @@
+.Video_Popup {
+  .Popup__wrapper,
+  .Video_Popup__wrapper {
+    @include media(">phone") {
+      width: 100rem;
+      height: fit-content;
+      // max-height: 90%;
+    }
+  }
+
+  .Video_Popup__wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 3rem 4rem;
+    max-height: 24rem;
+
+    @include media("<phone") {
+        padding: 2rem 2rem;
+    }
+  }
+  &__heading,
+  &__action_panel {
+    height: fit-content;
+  }
+  &__content {
+    display: block;
+    flex: 1 1 0%;
+    overflow: scroll;
+    p {
+      width: 100% !important;
+    }
+  }
+
+  .video__container {
+    position: relative;
+    pointer-events: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/1;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    @include media("<phone") {
+        aspect-ratio: 5/4;
+    }
+
+    .video__overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) -26.3%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
+      z-index: 10;
+    }
+
+    video, figure {
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      filter: brightness(0.85);
+      object-fit: cover;
+      background-color: #000000;
+      @include media("<phone") {
+        object-position: 20%;
+      }
+    }
+
+    .video__container__cta {
+        position: absolute;
+        bottom: 5rem;
+        left: 4rem;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        @include media("<phone") {
+          bottom: 2rem;
+          left: 1.5rem;
+        }
+        h2 {
+          width: 60rem;
+          font-size: 4rem;
+          line-height: 99.01%;
+          color: #ffffff;
+          @include media("<phone") {
+            width: 100%;
+            font-size: 2.4rem;
+            width: 34.4rem;
+          }
+        }
+    
+        a {
+          @extend %watch;
+          width: 21.1rem;
+          pointer-events: all;
+          @include media("<phone") {
+            width: 17.8rem;
+          }
+        }
+
+    }
+  }
+
+  .video__prop__mobile {
+    @include media(">phone") {
+        display: none;
+    }
+  }
+
+  .video__title {
+    font-family: "Nohemi";
+    font-style: normal;
+    // font-weight: 900;
+    font-weight: 700;
+  }
+
+  .video__description {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 105.26%;
+    color: #7b7b7b;
+    line-clamp: 8;
+
+    @include media("<phone") {
+        font-size: 1.3rem;
+        line-clamp: 12;
+    }
+  }
+
+  &__action_panel {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    column-gap: 1.5rem;
+    margin-top: 2.5rem;
+
+    .video__cta {
+      @extend .Nav__cta;
+      display: flex;
+      width: fit-content;
+      height: fit-content;
+      flex-wrap: nowrap;
+      align-items: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      text-wrap: nowrap;
+      @include media("<phone") {
+        display: flex !important;
+      }
+
+      &.later {
+        background: white;
+        color: #2e2e2e;
+        border: 0.1rem solid #f8a519;
+      }
+    }
+  }
+}

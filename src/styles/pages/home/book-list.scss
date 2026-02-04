@@ -1,0 +1,120 @@
+.Books__carousel {
+  @extend .Categories;
+  // padding-top: unset; // This covers hero section when the 'Books__carousel' section is diretly under it
+  margin-bottom: -0.1rem;
+}
+
+.Books__carousel.Event__carousel {
+  padding-top: 100vh;
+
+  .Books__carousel__wrapper {
+    li,
+    figure {
+      height: auto !important;
+      aspect-ratio: 9/16 !important;
+    }
+  }
+}
+
+.Watching {
+  padding-top: unset !important;
+}
+
+.Books__carousel__wrapper {
+  @extend .Categories__wrapper;
+  padding: 12.8rem 12rem 0.1rem;
+  // margin-inline: -15.2rem;
+  @include media("<phone") {
+    padding: 9.4rem 2.2rem 6.1rem;
+  }
+
+  h2 {
+    width: 48.4rem;
+    @include media("<phone") {
+      width: 23.8rem;
+    }
+  }
+
+  a {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #090908;
+    position: relative;
+    bottom: 1.5rem + 3.9rem;
+    justify-content: flex-end;
+    text-underline-offset: 0.25em;
+    display: flex;
+  }
+
+  & > a {
+    text-decoration: underline;
+    @include media("<phone") {
+      position: absolute;
+      bottom: 0.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  ul {
+    display: flex;
+    cursor: grab;
+    @include media("<phone") {
+      overflow: scroll;
+      justify-content: flex-start;
+      scroll-snap-type: x mandatory;
+      gap: 1.6rem;
+      overflow-y: hidden;
+    }
+  }
+
+  li {
+    width: 28.5rem;
+    height: 39.8rem;
+    background-color: transparent;
+    border-radius: unset;
+    overflow: visible;
+    @include media("<phone") {
+      scroll-snap-align: center;
+      width: 28.5rem - 2rem;
+      height: 36.7rem - 2.5rem;
+    }
+
+    img {
+      display: block;
+    }
+
+    a {
+      position: unset;
+      overflow: hidden;
+    }
+  }
+
+  figure {
+    width: 28.5rem;
+    height: 36.7rem;
+    background-color: #ffffff;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    @include media("<phone") {
+      width: 28.5rem - 2rem;
+      height: 36.7rem - 2.5rem;
+    }
+  }
+
+  h3 {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+    color: #090908;
+    top: 37.8rem;
+    left: 0;
+  }
+}

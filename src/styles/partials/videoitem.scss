@@ -1,0 +1,362 @@
+.VideoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  // transition: transform 0.25s 0s ease-out;
+  position: relative;
+  @include media("<phone") {
+    gap: 1rem;
+    transform-origin: 20% 90%;
+  }
+
+  @include media(">=phone") {
+    &:hover {
+      // z-index: 1;
+      // transform: scale(1.5);
+      // transition: transform 0.25s 0.25s ease-out;
+      // @include media("<phone") {
+      //   transform: scale(1.35);
+      // }
+
+      // h5 {
+      //   opacity: 0;
+      //   transition: opacity 0.2s 0s ease-out;
+      // }
+
+      // .VideoItem__progress {
+      //   opacity: 0;
+      //   transition: opacity 0s 0s ease-out;
+      // }
+
+      // .VideoItem__hover {
+      //   opacity: 1;
+      //   transform: translateY(0rem) scaleY(1);
+      //   transition: opacity 0.2s 0.2s ease-out;
+      //   transition: transform 0.3s 0.2s ease-out;
+      //   transition: height 0.3s 0.2s ease-out;
+      //   height: 12.59rem;
+      //   * {
+      //     opacity: 1;
+      //   }
+      //   @include media("<phone") {
+      //     height: 17rem;
+      //   }
+      // }
+      .VideoItem__hover {
+        opacity: 1;
+        transform: translateY(0.2rem) scaleY(1);
+        // transition: opacity 0.2s 0.2s ease-out;
+        // transition: transform 0.3s 0.2s ease-out;
+        transition: height 0.3s ease-out;
+        height: auto;
+        * {
+          opacity: 1;
+        }
+        @include media("<phone") {
+          height: 17rem;
+        }
+      }
+    }
+  }
+
+  figure {
+    width: 30rem * 1.35;
+    height: 16rem * 1.35;
+    background: #f3f0e7;
+    border-radius: 0.8rem;
+    @include media("<phone") {
+      width: 26.818rem;
+      height: 14.303rem;
+      border-radius: 0.715rem;
+    }
+  }
+
+  video {
+    width: 30rem * 1.35;
+    height: 16rem * 1.35;
+    background: #f3f0e7;
+    border-radius: 0.8rem;
+    @include media("<phone") {
+      width: 26.818rem;
+      height: 14.303rem;
+      border-radius: 0.715rem;
+    }
+  }
+
+  &__spinner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+
+  h5 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    // transition: opacity 0.2s 0s ease-out;
+    opacity: 1;
+    max-width: 30rem * 1.35;
+    @include media("<phone") {
+      font-size: 1.43rem;
+      max-width: 26.818rem;
+    }
+  }
+
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    // transition: opacity 0.2s 0s ease-out;
+    opacity: 1;
+    max-width: 30rem * 1.35;
+    @include media("<phone") {
+      font-size: 1rem;
+      max-width: 26.818rem;
+    }
+  }
+}
+
+.VideoItem__progress {
+  position: relative;
+  width: 29.5rem;
+  height: 0rem;
+  border: 0.3rem solid #575757;
+  border-radius: 1rem;
+  // transition: opacity 0.2s 0s ease-out;
+  opacity: 1;
+  @include media("<phone") {
+    width: 26.552rem;
+    border: 0.134rem solid #575757;
+    margin-left: 0.181rem;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    width: 75%;
+    height: 0;
+    left: -0.3rem;
+    top: -0.3rem;
+    border-radius: 1rem;
+    border: 0.3rem solid #f3f0e7;
+    @include media("<phone") {
+      border: 0.134rem solid #f3f0e7;
+      top: -0.126rem;
+    }
+  }
+}
+
+.VideoItem__hover {
+  position: absolute;
+  // width: 30rem * 1.35;
+  height: 10.59rem * 1.35;
+  left: -0.1rem;
+  right: -0.1rem;
+  top: 13.972rem;
+  background: #0c0c0f;
+  color: #ffffff;
+  border-radius: 1.6rem 1.6rem 0 0;
+  opacity: 0;
+  // transform: translateY(2rem) scaleY(0.5);
+  // transition: opacity 0.2s 0s ease-out;
+  // transition: transform 0.3s 0.1s ease-out;
+  // transition: height 0.3s 0.1s ease-out;
+  transition: height 0.3s ease-out;
+  pointer-events: none;
+  overflow: hidden;
+  padding: 1.248rem;
+  @include media("<phone") {
+    width: 26.818rem;
+    height: 5rem;
+    top: 12.572rem;
+    transform: translateY(1rem) scaleY(0.15);
+    clip-path: unset;
+  }
+
+  * {
+    opacity: 0;
+    // transition: opacity 0.2s 0.35s ease-out;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h6 {
+    margin-top: 1.095rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.793951rem * 1.35;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #818181;
+    @include media("<phone") {
+      font-size: 1.1rem;
+      margin-top: 1.3rem;
+    }
+  }
+
+  h4 {
+    margin-top: 0.34rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.907372rem * 1.35;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    opacity: 1;
+    max-width: 40.5rem;
+    @include media("<phone") {
+      font-size: 1.3rem;
+      margin-top: 0.7rem;
+    }
+  }
+
+  p {
+    margin-top: 0.624rem;
+    overflow: hidden;
+    width: 24.612rem * 1.35;
+    height: 2rem * 1.35;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.680529rem * 1.35;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #b5b5b5;
+    @include media("<phone") {
+      font-size: 1rem;
+      height: 5.8rem;
+      width: 23rem;
+    }
+  }
+}
+
+.VideoItem__cta {
+  @extend %watch;
+  // padding: 0.7rem 0.4rem;
+  // gap: 0.5rem;
+  width: 10.265rem * 2;
+  // height: 2.364rem;
+  // border-radius: 0.454rem;
+  // font-size: 0.794rem;
+  // letter-spacing: -0.02em;
+  color: #090908;
+
+  // svg {
+  //   width: 0.907rem;
+  //   height: 0.907rem;
+  // }
+}
+
+.VideoItem__add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Euclid Circular A";
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.357;
+  white-space: nowrap;
+  margin: 0;
+  // padding: 0.7rem 0.4rem;
+  padding: 0.7rem * 1.75 0.4rem * 1.75;
+  // gap: 0.5rem;
+  gap: 0.5rem * 1.75;
+  // height: 2.364rem;
+  height: 2.364rem * 2;
+  border-radius: 0.454rem;
+  // font-size: 0.794rem;
+  font-size: 0.794rem * 1.75;
+  letter-spacing: -0.02em;
+  color: #f3f0e7;
+  cursor: pointer;
+
+  svg {
+    // width: 0.907rem;
+    // height: 0.907rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.VideoItem__wrapper {
+  &:hover {
+    .VideoItem__popover {
+      // display: block;
+      // opacity: 1;
+      // visibility: visible;
+      // transform: scale(2);
+      // width: 30rem * 1.35;
+      // height: 16rem * 1.35;
+    }
+  }
+}
+
+.VideoItem__popover {
+  // display: none;
+  // visibility: hidden;
+  width: 30rem;
+  height: 16rem;
+  background-color: white;
+  // opacity: 0;
+  // transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.VideoItem__Recommended {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 30rem * 1.35;
+  aspect-ratio: 30/16;
+  border-radius: 0.8rem;
+  transition: 0.35s ease-out;
+
+  video {
+    border-radius: inherit;
+  }
+
+  &__overlay {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 2rem;
+
+    p {
+      font-family: "Euclid Circular A";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 127%;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+  }
+
+  &:hover {
+    border: 0.2rem solid #f8a519;
+    padding: 0.5rem;
+  }
+}

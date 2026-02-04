@@ -1,0 +1,379 @@
+.__signup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffff;
+}
+
+.Signup__form {
+  padding: 6.35rem 8.7rem;
+  @include media("<phone") {
+    transform: scale(0.82);
+    padding: 0;
+  }
+
+  & > img {
+    filter: invert(0);
+  }
+
+  h1 {
+    margin-top: 7.95rem;
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+  }
+
+  p {
+    margin-top: 0.8rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: #2e2e2e;
+  }
+
+  form {
+    margin-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  label {
+    margin-top: 2.1rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.285;
+    letter-spacing: -0.02em;
+    color: #2e2e2e;
+    width: 38.2rem;
+    position: relative;
+  }
+
+  input {
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+    width: 38.2rem;
+    height: 4.8rem;
+    border: 0.1rem solid #efefef;
+    border-radius: 0.8rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 0.8;
+    letter-spacing: -0.02em;
+    // color: #6D717C;
+    color: #2e2e2e;
+    margin-top: 0.4rem;
+  }
+
+  h6 {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+    color: #f8a519;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    margin: 1.2rem auto 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4rem;
+    text-align: center;
+  }
+
+  em {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    letter-spacing: -0.02em;
+    // color: #f8a519;
+    text-underline-offset: 0.25em;
+    cursor: pointer;
+    text-align: center;
+    margin: 1.2rem 0 -2.2rem auto;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  label + div {
+    justify-content: space-between;
+    input {
+      width: 2em !important;
+      height: 2em !important;
+      font-size: 3.2rem !important;
+      padding: 0 !important;
+    }
+  }
+}
+
+.Signup__password__show {
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  right: -3.4rem;
+  top: 3.8rem;
+  cursor: pointer;
+  @include media("<phone") {
+    right: 2rem;
+  }
+}
+
+.Signup__password__restrict {
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-family: "Euclid Circular A";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.285;
+  letter-spacing: -0.02em;
+  color: #868686;
+  // color: hsl(0, 0%, 20%);
+  &:first-of-type {
+    margin-top: 1rem;
+  }
+
+  img {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  span {
+    color: hsl(0, 0%, 20%);
+  }
+}
+
+.Signup__submit__primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38.2rem;
+  height: 4.8rem;
+  background: #f8a519;
+  border-radius: 0.8rem;
+  margin-top: 4.3rem;
+  font-family: "Euclid Circular A";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.Signup__submit__secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38.2rem;
+  height: 4.8rem;
+  background: transparent;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+  font-family: "Euclid Circular A";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  color: #6d717c;
+  gap: 1rem;
+  border: 0.1rem solid #efefef;
+
+  img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+.Signup__illustration {
+  background-color: #f3f0e7;
+  height: 100vh;
+}
+
+.Popup {
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-content: center;
+  @include media("<phone") {
+    place-content: end;
+  }
+}
+
+.Popup__wrapper {
+  width: 55.7rem;
+  height: 64.8rem;
+  background: #ffffff;
+  border-radius: 2.4rem;
+  position: relative;
+  &.active {
+    height: 53.4rem;
+  }
+  @include media("<phone") {
+    width: 39rem;
+    height: 55.7rem;
+    border-radius: 2.4rem 2.4rem 0rem 0rem;
+  }
+
+  .Signup__form {
+    padding: 4.7rem 6.6rem 6.7rem 6rem;
+    @include media("<phone") {
+      padding: 0;
+    }
+  }
+
+  .Vid__added {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 1rem;
+    position: fixed;
+    z-index: 100;
+    height: 4.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10rem;
+    background: #f8a519;
+    border-radius: 1.6rem;
+    @include media("<phone") {
+      width: max-content;
+      transform: translateX(-50%) scale(0.75);
+    }
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    p {
+      font-family: "Euclid Circular A";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+  }
+
+  h1 {
+    margin-top: unset;
+  }
+
+  input,
+  button {
+    width: 43.1rem;
+    @include media("<phone") {
+      width: 38rem;
+    }
+    z-index: 30;
+  }
+
+  & > button {
+    width: 4.4rem;
+    height: 4.4rem;
+    position: absolute;
+    top: 3.3rem;
+    right: 3.2rem;
+    padding: 1rem;
+    border-radius: 6.2rem;
+    @include media("<phone") {
+      z-index: 10;
+    }
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      filter: invert(1);
+    }
+  }
+}
+
+//re_TmuawpJi_P3bCWK8i2sNpwrgTLL32GsVZ
+
+.input-country {
+  margin-inline: -1.2rem;
+  width: 39.2rem;
+  height: 4.6rem;
+  border: unset;
+  background-color: unset;
+  position: relative;
+  background-color: transparent;
+  border: unset;
+  outline: unset;
+  font-family: "Euclid Circular A";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.285;
+  letter-spacing: -0.02em;
+  color: #2e2e2e;
+  width: 38.2rem;
+  position: relative;
+  box-shadow: 0rem 0rem 0rem 0.1rem #f8a519;
+  border-radius: 0.8rem;
+  margin: 6rem auto -2rem;
+  width: 100%;
+  @include media("<phone") {
+    width: 97%;
+    margin: 2rem 0 -2rem;
+  }
+
+  * {
+    max-height: 4.6rem;
+  }
+
+  & > div:nth-of-type(1) {
+    min-height: unset;
+    border: unset !important;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 4.6rem;
+    padding: unset;
+
+    & > div {
+      height: 4.6rem;
+    }
+  }
+
+  & > div:nth-of-type(2) {
+    max-height: unset;
+    cursor: pointer;
+  }
+
+  .css-1u9des2-indicatorSeparator {
+    align-self: stretch;
+    width: 0.1rem;
+    background-color: hsl(0, 0%, 80%);
+    height: 4.8rem;
+    margin: unset;
+  }
+}

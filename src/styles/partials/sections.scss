@@ -1,0 +1,25 @@
+.Sections {
+  @extend .Categories;
+}
+
+.Sections__wrapper {
+  position: relative;
+  padding: 100vh 0 0;
+  padding: 100svh 0 0;
+  display: grid;
+  width: 100%;
+  overflow: hidden;
+  z-index: 20;
+  background-color: #0c0c0f;
+  padding: 7.7rem 0rem 14.1rem 12rem;
+  width: 100vw;
+  gap: 6rem;
+  @include media("<phone") {
+    padding: 4.2rem 0rem 18rem 2.3rem;
+    gap: 4.997rem;
+  }
+}
+
+.Books__carousel {
+  padding: 0;
+}

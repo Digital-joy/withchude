@@ -1,0 +1,245 @@
+.__books {
+  padding-top: 9.6rem;
+  background-color: #f5f5f5;
+}
+
+.books__body {
+  display: grid;
+  gap: 6.6rem;
+  padding: 3rem 12rem 0;
+  @include media("<phone") {
+    padding: 0 2.2rem 0;
+    gap: 4.2rem;
+  }
+}
+
+.book {
+  display: flex;
+  height: min-content;
+  @include media("<phone") {
+    flex-direction: column !important;
+  }
+
+  &:nth-of-type(2n) {
+    flex-direction: row-reverse;
+
+    & > img {
+      height: 60.4rem;
+    }
+
+    p {
+      margin-top: 3.9rem;
+      margin-bottom: 5.9rem;
+    }
+
+    a img {
+      height: 3.4rem;
+      @include media("<phone") {
+        height: 2.5rem;
+        gap: 1.3rem;
+      }
+    }
+  }
+
+  &:nth-of-type(3) {
+    h2 {
+      width: 42rem;
+      @include media("<phone") {
+        width: 20.8rem;
+      }
+    }
+    & > img {
+      height: 53.8rem;
+    }
+
+    p:nth-of-type(1) {
+      margin-top: 3.9rem;
+    }
+
+    a img {
+      height: 3.4rem;
+      @include media("<phone") {
+        height: 2.5rem;
+        gap: 1.3rem;
+      }
+    }
+  }
+
+  & > img {
+    width: 50.8rem;
+    border-radius: 2.4rem;
+    height: 53.8rem;
+    @include media("<phone") {
+      width: 34.5rem;
+      height: 22.3rem !important;
+      border-radius: 2.2rem;
+    }
+  }
+
+  h2 {
+    width: 55.2rem;
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.8rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+    @include media("<phone") {
+      width: 23.9rem;
+      font-size: 2.6rem;
+    }
+  }
+
+  h6 {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.02em;
+    color: #363636;
+    margin-top: 1.4rem;
+    @include media("<phone") {
+      margin-top: 1.4rem;
+      font-size: 1.4rem;
+    }
+
+    i {
+      color: #787878;
+    }
+  }
+
+  ul {
+    margin-top: 3.3rem;
+    @include media("<phone") {
+      margin-top: 2rem;
+    }
+  }
+
+  li,
+  p {
+    width: 55.2rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.02em;
+    color: #787878;
+    list-style: disc;
+    margin-left: 2rem;
+    @include media("<phone") {
+      width: 27.9rem;
+      font-size: 1.4rem;
+      line-height: 1.36;
+    }
+  }
+
+  p {
+    margin-top: 1.7rem;
+    margin-left: unset;
+  }
+
+  button {
+    margin-top: 3.9rem;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.02em;
+    color: #000000;
+    gap: 1.9rem;
+    padding: unset;
+    @include media("<phone") {
+      margin-top: 2.8rem;
+      font-size: 1.4rem;
+      gap: 1.45rem;
+      line-height: unset;
+    }
+
+    img {
+      height: 5.496rem;
+      width: auto;
+      @include media("<phone") {
+        height: 3.967rem;
+      }
+    }
+  }
+}
+
+.book__left {
+  background-color: #ffffff;
+  padding: 6.1rem 7.9rem 4.7rem 6.1rem;
+  border-radius: 2.4rem;
+  @include media("<phone") {
+    padding: 3.7rem 2.5rem 3.4rem 3.1rem;
+    width: 34.5rem;
+  }
+}
+
+.book__footer {
+  padding: 16.5rem 12rem 17.1rem;
+  display: flex;
+  gap: 14.1rem;
+  padding-bottom: unset !important;
+  @include media("<phone") {
+    padding: 5.5rem 2.2rem 5.3rem;
+    flex-direction: column;
+    gap: 3.4rem;
+  }
+
+  h3 {
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.81145rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+    i {
+      color: #c4c4c4;
+    }
+  }
+
+  p {
+    margin-top: 2.7rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 135.94%;
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.02em;
+    color: #787878;
+    @include media("<phone") {
+      font-size: 1.4rem;
+      margin-top: 1.5rem !important;
+    }
+  }
+
+  p:nth-of-type(2) {
+    margin-top: 2rem;
+  }
+
+  img {
+    width: 57.1rem;
+    height: 39.9rem;
+    border-radius: 1.6rem;
+    @include media("<phone") {
+      width: 34.5rem;
+      height: 32.2rem;
+    }
+  }
+}

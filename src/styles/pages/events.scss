@@ -1,0 +1,418 @@
+.__events {
+  padding-top: 9.6rem;
+  background-color: #f5f5f5;
+}
+
+.events__body {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 5.6rem;
+  padding: 3rem 12rem 12.1rem;
+  @include media("<phone") {
+    padding: 0 2.2rem 2.2rem;
+    gap: 4.2rem;
+  }
+
+  h2 {
+    width: 60.6rem;
+    font-family: "Nohemi";
+    font-weight: 500;
+    font-size: 4.8rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+    @include media("<phone") {
+      width: unset;
+      font-size: 2.4rem;
+      width: 27.8rem;
+    }
+  }
+
+  p {
+    font-family: "Euclid Circular A";
+    white-space: pre-line;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 135.94%;
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.02em;
+    color: #787878;
+    margin: 2.5rem 0 -0.6rem;
+    max-width: 110.9rem;
+    @include media("<phone") {
+      margin: 1.6rem 0;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.event {
+  display: flex;
+  height: min-content;
+  @include media("<phone") {
+    flex-direction: column !important;
+
+    & > img,
+    .event__left {
+      border-radius: unset;
+    }
+    border-radius: 2.2rem !important;
+
+    & > img {
+      border-top-left-radius: 2.2rem;
+      border-top-right-radius: 2.2rem;
+      border-bottom-left-radius: unset !important;
+      border-bottom-right-radius: unset !important;
+    }
+    .event__left {
+      border-top-left-radius: unset;
+      border-top-right-radius: unset;
+      border-bottom-left-radius: 2.2rem;
+      border-bottom-right-radius: 2.2rem;
+    }
+  }
+
+  &:nth-of-type(2n) {
+    // flex-direction: row-reverse;
+
+    & > img {
+      // min-height: 64rem;
+      height: 100%;
+      // object-fit: contain;
+    }
+
+    p {
+      margin-top: 2.8rem;
+      margin-bottom: -0.9rem;
+      width: 56.4rem;
+
+      &:last-of-type {
+        margin-bottom: 2.7rem;
+      }
+    }
+
+    a img {
+      height: 3.4rem;
+      @include media("<phone") {
+        height: 2.5rem;
+        gap: 1.3rem;
+      }
+    }
+  }
+
+  &:nth-of-type(3) {
+    & > img {
+      // height: 64rem;
+    }
+
+    p {
+      margin-top: 2.8rem;
+      margin-bottom: -0.9rem;
+      width: 56.4rem;
+
+      &:last-of-type {
+        margin-bottom: 2.7rem;
+      }
+    }
+
+    a img {
+      height: 3.4rem;
+      @include media("<phone") {
+        height: 2.5rem;
+        gap: 1.3rem;
+      }
+    }
+  }
+
+  & > img {
+    width: 50.8rem;
+    border-radius: 2.4rem;
+    // height: 64rem;
+    @include media("<phone") {
+      width: 34.5rem;
+      height: auto !important;
+      // border-radius: 2.2rem;
+    }
+  }
+
+  h2 {
+    width: 52.2rem;
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.8rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+    @include media("<phone") {
+      width: 23.9rem;
+      font-size: 2.6rem;
+    }
+  }
+
+  h6 {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.02em;
+    color: #363636;
+    margin-top: 1.4rem;
+    @include media("<phone") {
+      margin-top: 1.4rem;
+      font-size: 1.4rem;
+    }
+
+    i {
+      color: #787878;
+    }
+  }
+
+  ul {
+    margin-top: 1.4rem;
+    @include media("<phone") {
+      margin-top: 2rem;
+    }
+  }
+
+  li,
+  p {
+    width: 55.2rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.02em;
+    color: #787878;
+    list-style: disc;
+    margin-left: 2rem;
+    @include media("<phone") {
+      width: 27.9rem;
+      font-size: 1.4rem;
+      line-height: 1.36;
+    }
+  }
+
+  p {
+    margin-top: 1.7rem;
+    margin-left: unset;
+    @include media("<phone") {
+      width: unset !important;
+    }
+
+    strong {
+      font-weight: 500;
+      color: #363636;
+    }
+  }
+
+  a {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // width: 11.3rem;
+    // height: 4.677rem;
+    // background: #f8a519;
+    // border-radius: 8.2rem;
+    // font-family: "Euclid Circular A";
+    // font-style: normal;
+    // font-weight: 400;
+    // font-size: 1.582rem;
+    // line-height: 2rem;
+    // letter-spacing: -0.02em;
+    // color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.event__left {
+  background-color: #ffffff;
+  padding: 5.1rem 6.7rem 4.1rem 6.1rem;
+  border-radius: 2.4rem;
+  width: 69.2rem;
+  // min-height: 64rem;
+  @include media("<phone") {
+    padding: 3.7rem 2.5rem 3.4rem 3.1rem;
+    width: 34.5rem;
+    height: auto !important;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    gap: 1.5rem;
+    margin-top: 2.4rem;
+
+    a {
+      @extend %watch;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      width: fit-content !important;
+      text-decoration: none;
+    }
+
+    h6 {
+      font-family: "Nohemi";
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 99.01%;
+      // letter-spacing: -0.02em;
+      // color: #090908;
+      margin-bottom: 1rem;
+      @include media("<phone") {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .checkout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+
+    button.order {
+      @extend %watch;
+    }
+  }
+  .quantity {
+    display: flex;
+    align-items: center;
+    // gap: 0.75rem; /* Tailwind’s “gap-3” equals 0.75rem */
+
+    button {
+      @extend %watch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      background-color: #f8a519; /* bg-gray-2 */
+      color: black; /* text-dark */
+      transition: all 0.2s ease-out; /* duration-200 + ease-out */
+      border-radius: unset;
+
+      svg {
+        fill: currentColor;
+      }
+
+      &.minus {
+        border-top-left-radius: 5px; /* rounded-[5px] */
+        border-bottom-left-radius: 5px; /* rounded-[5px] */
+      }
+
+      &.plus {
+        border-top-right-radius: 5px; /* rounded-[5px] */
+        border-bottom-right-radius: 5px; /* rounded-[5px] */
+      }
+
+      &:hover {
+        background-color: #f8a519;
+        border-radius: unset;
+
+        &.minus {
+          border-top-left-radius: 8.2rem;
+          border-bottom-left-radius: 8.2rem;
+        }
+
+        &.plus {
+          border-top-right-radius: 8.2rem;
+          border-bottom-right-radius: 8.2rem;
+        }
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5rem; // w-20 → 20 × 0.25rem
+      height: 100%;
+      // border-radius: 5px; // rounded-[5px]
+
+      padding: 1.6rem;
+      border: 0.1rem solid #efefef;
+      // border-radius: 0.8rem;
+      // font-family: "Euclid Circular A";
+      font-family: sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      // font-size: 1.6rem;
+      font-size: 16px;
+      // line-height: 2rem;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      color: #2e2e2e;
+    }
+  }
+}
+
+.event__footer {
+  padding: 16.5rem 12rem 17.1rem;
+  display: flex;
+  gap: 14.1rem;
+  @include media("<phone") {
+    padding: 5.5rem 2.2rem 5.3rem;
+    flex-direction: column;
+    gap: 3.4rem;
+  }
+
+  h3 {
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.81145rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+    i {
+      color: #c4c4c4;
+    }
+  }
+
+  p {
+    margin-top: 2.7rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 135.94%;
+    leading-trim: both;
+    text-edge: cap;
+    letter-spacing: -0.02em;
+    color: #787878;
+    @include media("<phone") {
+      font-size: 1.4rem;
+      margin-top: 1.5rem !important;
+    }
+  }
+
+  p:nth-of-type(2) {
+    margin-top: 2rem;
+  }
+
+  img {
+    width: 57.1rem;
+    height: 39.9rem;
+    border-radius: 1.6rem;
+    @include media("<phone") {
+      width: 34.5rem;
+      height: 32.2rem;
+    }
+  }
+}

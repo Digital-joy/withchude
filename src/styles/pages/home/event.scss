@@ -1,0 +1,71 @@
+.Event__Section {
+  @extend .Categories;
+  padding-top: unset;
+  margin-bottom: -0.1rem;
+}
+
+.Event__Section__wrapper {
+  @extend .Categories__wrapper;
+  padding: 12.8rem 12rem 0.1rem;
+  // margin-inline: -15.2rem;
+  @include media("<phone") {
+    padding: 9.4rem 2.2rem 6.1rem;
+  }
+
+  h2 {
+    width: 48.4rem;
+    @include media("<phone") {
+      width: 23.8rem;
+    }
+  }
+
+  a {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #090908;
+    position: relative;
+    bottom: 1.5rem + 3.9rem;
+    justify-content: flex-end;
+    text-underline-offset: 0.25em;
+    display: flex;
+  }
+
+  & > a {
+    text-decoration: underline;
+    @include media("<phone") {
+      position: absolute;
+      bottom: 0.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .banner {
+    width: 100%;
+    height: auto;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+    border-radius: 1.6rem;
+    @include media("<phone") {
+      margin-top: 1.6rem;
+      margin-bottom: 1.6rem;
+    }
+
+    &__desktop {
+      @include media("<phone") {
+        display: none;
+      }
+    }
+
+    &__mobile {
+      display: none;
+      @include media("<phone") {
+        display: block;
+      }
+    }
+  }
+}

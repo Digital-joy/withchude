@@ -1,0 +1,139 @@
+.Faq {
+  @extend .Categories;
+  padding-top: unset;
+  margin-bottom: -0.1rem;
+}
+
+.Faq__wrapper {
+  @extend .Categories__wrapper;
+  padding: 12.8rem 12rem 14.5rem;
+  // margin-inline: -15.2rem;
+  @include media("<phone") {
+    padding: 9.4rem 2.2rem 6.1rem;
+  }
+
+  h2 {
+    width: unset;
+    @include media("<phone") {
+      width: 25.8rem;
+    }
+  }
+
+  & > a {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #090908;
+    position: relative;
+    bottom: 1.5rem + 3.9rem;
+    justify-content: flex-end;
+    text-underline-offset: 0.25em;
+    display: flex;
+  }
+
+  & > a {
+    text-decoration: underline;
+    @include media("<phone") {
+      position: absolute;
+      bottom: 0.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  ul {
+    display: flex;
+    margin-top: 3.4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  li {
+    width: 120rem;
+    height: 6.1rem;
+    background: #ffffff;
+    border-radius: 1.6rem;
+    transition: 0.5s ease;
+    @include media("<phone") {
+      width: 34.6rem;
+      // height: 9.1rem;
+      height: unset;
+    }
+
+    &.open {
+      height: 21.5rem;
+      @include media("<phone") {
+        // height: 47.5rem;
+        height: unset;
+
+        p {
+          display: block;
+        }
+      }
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  figure {
+    width: 28.5rem;
+    height: 36.7rem;
+    background-color: #ffffff;
+    border-radius: 1.6rem;
+    overflow: hidden;
+  }
+
+  h3 {
+    position: static;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 105.26%;
+    color: #000000;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 2rem;
+    height: 6.2rem;
+    @include media("<phone") {
+      // height: 9.2rem;
+      height: unset;
+    }
+  }
+
+  p {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 128%;
+    color: #494949;
+    margin: 0 2rem;
+    max-width: 107.7rem;
+    white-space: break-spaces;
+    @include media("<phone") {
+      font-size: 1.6rem;
+      display: none;
+      padding-bottom: 2rem;
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    transition: 0.5s ease;
+  }
+}

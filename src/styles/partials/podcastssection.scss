@@ -1,0 +1,87 @@
+.PodcastsSection {
+  color: #000000;
+  padding: 4.3rem 12rem 0;
+  @include media("<phone") {
+    padding: 4.1rem 2.2rem 0;
+  }
+
+  h4 {
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    display: flex;
+    @include media("<phone") {
+      font-size: 1.6rem;
+    }
+  }
+
+  aside a,
+  aside button {
+    background-color: unset;
+    display: flex;
+    align-items: center;
+    display: flex;
+    gap: 0.9rem;
+    padding: 0 1.357rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem !important;
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+    color: #787878;
+    color: red;
+  }
+}
+
+.PodcastsSection__Podcasts__wrapper {
+  background-color: #ffffff;
+  margin-top: 1.9rem;
+  border-radius: 1.6rem;
+  position: relative;
+  @include media("<phone") {
+    margin-top: 1.4rem;
+  }
+}
+
+.PodcastsSection__Podcasts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4.8rem;
+  height: 60.3rem;
+  overflow: scroll;
+  padding: 4.6rem 8.4rem 4.6rem 3.5rem;
+  align-content: flex-start;
+  @include media("<phone") {
+    padding: 2.277rem 3.38rem 2.277rem 1.52rem;
+    height: 62.3rem;
+  }
+}
+
+.PodcastsSection__track {
+  position: absolute;
+  width: 0.8rem;
+  right: 2.3rem;
+  top: 4.6rem;
+  bottom: 4.9rem;
+  background: #f5f5f5;
+  border-radius: 3.6rem;
+  @include media("<phone") {
+    right: 0.9rem;
+    top: 1.6rem;
+    bottom: 1.877rem;
+  }
+}
+
+.PodcastsSection__bar {
+  position: absolute;
+  width: 0.8rem - 0.2rem;
+  left: 0.1rem;
+  top: 0.2rem;
+  height: 4.2rem;
+  background: #f8a519;
+  border-radius: 1.5rem;
+}

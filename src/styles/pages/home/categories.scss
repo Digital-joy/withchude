@@ -1,0 +1,213 @@
+.Categories {
+  position: relative;
+  padding: 100vh 0 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 20;
+  pointer-events: none;
+  * {
+    pointer-events: all;
+  }
+  @include media("<phone") {
+    padding: 100svh 0 0;
+  }
+}
+
+.Categories__wrapper {
+  background-color: #f5f5f5;
+  padding: 11.8rem 12rem 0;
+  @include media("<phone") {
+    padding: 7.6rem 2.2rem 0;
+  }
+
+  h2 {
+    width: 54.2rem;
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.403rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+    @include media("<phone") {
+      width: 25.8rem;
+      font-size: 2.4rem;
+    }
+
+    .line {
+      white-space: pre;
+      width: max-content;
+      overflow-x: visible;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 4.3rem;
+    gap: 1.7rem 2rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include media("<phone") {
+      margin-top: 1.9rem;
+      gap: 2.6rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  li {
+    width: 38.6rem;
+    height: 30.6rem;
+    border-radius: 0.8rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2.4rem;
+    background-color: #ffffff;
+    transition: filter 0.5s ease-out;
+
+    img {
+      display: none;
+    }
+
+    &:hover {
+      filter: brightness(0.975);
+    }
+    @include media("<phone") {
+      width: 34.6rem;
+      height: 17.1rem;
+      border-radius: 1.6rem;
+      border: 0.2rem solid transparent;
+      &:hover {
+        // border: 0.2rem solid #f8a519;
+      }
+      canvas {
+        display: none;
+      }
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  h3 {
+    position: absolute;
+    bottom: 5.4rem;
+    left: 3rem;
+    font-family: "Nohemi";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 99.01%;
+    letter-spacing: -0.02em;
+    color: #090908;
+    @include media("<phone") {
+      bottom: 4rem;
+      left: 2.6rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  article {
+    gap: 0.4rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #787878;
+    position: absolute;
+    bottom: 3.4rem;
+    left: 3rem;
+    display: flex;
+    align-items: center;
+    height: 1.6rem;
+    @include media("<phone") {
+      bottom: 2.4rem;
+      left: 2.6rem;
+      font-size: 1.2rem;
+    }
+
+    img {
+      width: 1.6rem;
+      height: 1.6rem;
+      @include media("<phone") {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+}
+
+.Categories__wrapper > ul > a {
+  gap: unset;
+  font-family: unset;
+  font-style: unset;
+  font-weight: unset;
+  font-size: unset;
+  line-height: unset;
+  letter-spacing: unset;
+  color: unset;
+  position: unset;
+  bottom: unset;
+  left: unset;
+  display: unset;
+  align-items: unset;
+  height: unset;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.Categories__aside {
+  width: 38.6rem;
+  height: 30.6rem;
+  border-radius: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2.4rem;
+  border: 0.2rem solid #f8a519;
+  transition: 0.35s ease-out;
+  pointer-events: none;
+  position: absolute;
+  @include media("<phone") {
+    display: none;
+  }
+  &.one {
+    top: 0;
+    left: 0;
+  }
+  &.two {
+    top: 0;
+    left: 0 + 40.6rem;
+  }
+  &.three {
+    top: 0;
+    left: 0 + 40.6rem + 40.6rem;
+  }
+  &.four {
+    top: 0 + 32.3rem;
+    left: 0;
+  }
+  &.five {
+    top: 0 + 32.3rem;
+    left: 0 + 40.6rem;
+  }
+  &.six {
+    top: 0 + 32.3rem;
+    left: 0 + 40.6rem + 40.6rem;
+  }
+}

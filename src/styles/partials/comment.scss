@@ -1,0 +1,90 @@
+.Comment {
+  position: relative;
+  padding: 2.9rem 0 1.9rem;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 50.2rem;
+    height: 0.2rem;
+    background-color: #141414;
+    top: 14.5rem;
+    left: -5.8rem;
+  }
+
+  p {
+    margin-top: 1.2rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.29;
+    font-feature-settings: "zero" on;
+    color: #f8f9f9;
+  }
+
+  button {
+    background-color: transparent !important;
+    padding: unset !important;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.29;
+    font-feature-settings: "zero" on;
+    color: #b1b2b3;
+    margin-top: 1rem;
+  }
+}
+
+.Comment__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  figure {
+    width: 3rem;
+    height: 3rem;
+    background: #191919;
+    border-radius: 4.1rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.29;
+    leading-trim: both;
+    text-edge: cap;
+    display: grid;
+    place-content: center;
+    color: #ffffff;
+  }
+
+  h5 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.29;
+    display: flex;
+    align-items: center;
+    font-feature-settings: "zero" on;
+    color: #ffffff;
+  }
+
+  h6 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.33;
+    font-feature-settings: "zero" on;
+    color: #f8f9f9;
+    opacity: 0.7;
+  }
+
+  svg {
+    margin-left: auto;
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}

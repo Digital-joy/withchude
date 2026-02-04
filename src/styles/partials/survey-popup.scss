@@ -1,0 +1,83 @@
+.Survey_Popup {
+    .Popup__wrapper {
+        height: fit-content;
+    }
+
+    label {
+      font-family: "Euclid Circular A";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      letter-spacing: -0.02em;
+      color: #2e2e2e;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    textarea, .rating, .Signup__form {
+        width: 38.3rem;
+    }
+    textarea {
+        font-family: "Euclid Circular A";
+        font-style: normal;
+        font-weight: 400;
+        resize: none;
+        height: 11.5rem;
+        // background: #191919;
+        border: 0.1rem solid #282828;
+        border-radius: 1.2rem;
+        padding: 1.2rem 1rem;
+
+        &::placeholder {
+            color: #BEBEBE;
+        }
+    }
+    .rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 2rem;
+        margin-top: 3rem;
+
+        .star {
+            @extend .scale-1\.2;
+        }
+        .star path:hover {
+            fill: #f8a519 !important;
+            stroke-width: 1px !important;
+            stroke: black !important;
+        }
+    }
+
+    .action_panel {
+        display: flex;
+        flex-direction: row;
+        // justify-content: space-between;
+        column-gap: 1.5rem;
+        margin-top: 2.5rem;
+
+        .survey__cta {
+            @extend .Nav__cta;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            flex-wrap: nowrap;
+            align-items: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            text-wrap: nowrap;
+            @include media("<phone") {
+              display: flex !important;
+            }
+
+            &.later {
+                background: white;
+                color: #2e2e2e;
+                border: 0.1rem solid #f8a519;
+            }
+        }
+
+    }
+}

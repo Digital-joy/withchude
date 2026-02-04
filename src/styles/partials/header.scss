@@ -1,0 +1,624 @@
+header {
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  top: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 2.43rem 11.65rem 1.2rem;
+  z-index: 30;
+  background-color: #f5f5f503;
+  backdrop-filter: blur(0.3rem);
+  color: #ffffff;
+  --bg: #ffffff;
+  pointer-events: none;
+  height: 8.6rem;
+  // transition: height 0.2s ease;
+  overflow: hidden;
+  &.open {
+    // transition: 0.2s ease-out;
+    backdrop-filter: saturate(0) brightness(0.5) blur(1rem);
+    -webkit-backdrop-filter: saturate(0) brightness(0.5) blur(1rem);
+    height: 100vh;
+    pointer-events: all;
+
+    .Nav__search path,
+    .Nav__ham path {
+      stroke: #090908;
+    }
+  }
+  @include media("<phone") {
+    padding: 1.4rem 2.25rem 1.4rem;
+    height: 6rem;
+    transition: none;
+  }
+
+  & > * {
+    pointer-events: all;
+  }
+
+  form {
+    position: absolute;
+    width: 119.8rem;
+    left: 13.1rem;
+    top: 12.595rem;
+    border-bottom: 0.1rem solid color-mix(in srgb, var(--bg) 75%, transparent 25%);
+    @include media("<phone") {
+      width: unset;
+      left: 3rem;
+      top: 7.4rem;
+      right: 3rem;
+      border-bottom: unset;
+    }
+
+    button {
+      background-color: transparent;
+      border: transparent;
+      width: 3.1rem;
+      height: 3.1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      @include media("<phone") {
+        display: none;
+      }
+    }
+    path {
+      fill: color-mix(in srgb, var(--bg) 75%, transparent 25%);
+    }
+  }
+
+  & > article {
+    top: 5.3rem;
+    position: absolute;
+    width: 35.7rem;
+    // height: 59.6rem;
+    height: fit-content;
+    justify-content: space-around;
+    background: #ffffff;
+    border-radius: 1.6rem;
+    left: 1.65rem;
+    right: 1.65rem;
+    flex-direction: column;
+    padding: 1.4rem 2.6rem 2.2rem;
+    display: none;
+    @include media("<phone") {
+      display: flex;
+    }
+
+    a {
+      font-family: "Nohemi";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 99.01%;
+      letter-spacing: -0.02em;
+      color: #090908;
+      padding: 1.6rem 0;
+      border-bottom: 0.1rem solid #efefef;
+      position: relative;
+    }
+
+    div {
+      display: flex;
+      filter: invert(1);
+      gap: 1.6rem;
+      margin-top: 1.6rem;
+      a {
+        border: unset;
+        width: 2.4rem;
+        height: 2.4rem;
+        padding: unset;
+      }
+    }
+  }
+
+  input {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 4.7rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.7rem;
+    padding: 0.7rem 4rem 2.3rem 0;
+    background-color: transparent;
+    color: inherit;
+    &:placeholder-shown {
+      opacity: 0.75;
+    }
+    @include media("<phone") {
+      font-family: "Euclid Circular A";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 95%;
+      padding: 1.65rem;
+      background: #ffffff;
+      border: 0.0372617rem solid #efefef;
+      border-radius: 3.4rem;
+      color: #000000;
+      height: unset;
+      &:placeholder-shown {
+        color: #888888;
+      }
+    }
+  }
+}
+
+.header__results {
+  position: absolute;
+  width: 119.8rem;
+  left: 13.1rem;
+  top: 17.4rem;
+  background-color: #ffffff;
+  bottom: 10rem;
+  // height: fit-content;
+  // max-height: unquote("calc(100vh - 17.4rem - 10rem)");
+  overflow: scroll;
+  border-radius: 0 0 1.6rem 1.6rem;
+  padding: 0.4rem 2.6rem 1.1rem;
+  @include media("<phone") {
+    width: unset;
+    // max-height: fit-content;
+    left: 3rem;
+    right: 3rem;
+    top: 13.6rem;
+    border-radius: 1.6rem;
+    bottom: 8rem;
+    padding: 0.4rem 2.5rem 0.4rem 2rem;
+  }
+
+  a {
+    display: flex;
+    height: 8rem;
+    width: auto;
+    padding: 2.3rem 5.6rem 2.3rem 0;
+    align-items: center;
+    @include media("<phone") {
+      padding: 1.8rem 0.6rem;
+      height: unset;
+      flex-wrap: wrap;
+    }
+    &:not(&:last-of-type) {
+      border-bottom: 0.1rem solid #e5e5e5;
+    }
+  }
+
+  h5 {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 105.26%;
+    color: #000000;
+    width: 41rem;
+    @include media("<phone") {
+      font-family: "Euclid Circular A";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 105.26%;
+      color: #000000;
+      width: 27.3rem;
+      overflow-wrap: break-word;
+    }
+  }
+
+  img {
+    width: auto;
+    height: 2.977rem;
+    display: block;
+    margin-left: auto;
+    @include media("<phone") {
+      display: none;
+    }
+  }
+
+  h6 {
+    margin-left: 1.9rem;
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 105.26%;
+    text-align: right;
+    color: #767676;
+    @include media("<phone") {
+      display: block;
+      font-size: 1.281rem;
+      margin: 0.8rem 0 0;
+    }
+  }
+}
+
+.header__results__track {
+  position: fixed;
+  width: 0.8rem;
+  right: 11.9rem;
+  top: 1.6rem + 17.4rem;
+  bottom: 1.6rem + 10rem;
+  // height: auto;
+  // max-height: unquote("calc(100vh - 19rem - 11.6rem)");
+  background: #f5f5f5;
+  border-radius: 3.6rem;
+  overflow: hidden;
+  @include media("<phone") {
+    right: 3.8rem;
+    top: 15.1rem;
+    bottom: 9.5rem;
+  }
+}
+
+.header__results__bar {
+  position: absolute;
+  width: 0.8rem - 0.2rem;
+  left: 0.1rem;
+  top: 0.2rem;
+  height: 4.2rem;
+  background: #f8a519;
+  border-radius: 1.5rem;
+  @include media("<phone") {
+  }
+}
+
+.Nav__logo {
+  width: 10.882rem * 1.35;
+  height: 3.7rem * 1.35;
+  position: relative;
+  path {
+    // filter: invert(1);
+    @include media("<phone") {
+      filter: unset !important;
+    }
+  }
+  @include media("<phone") {
+    width: 10.882rem;
+    height: 3.7rem;
+  }
+}
+
+[data-template="watch"],
+[data-template="tag"] {
+  .Nav__logo {
+    filter: invert(1);
+    @include media("<phone") {
+    }
+  }
+}
+
+.Nav__links {
+  display: flex;
+  gap: 4.8rem;
+  align-items: center;
+  font-family: "Euclid Circular A";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.2857142857;
+  letter-spacing: -0.02em;
+  // color: #090908;
+  color: #ffffff;
+  --bg: #ffffff;
+  @include media("<phone") {
+    gap: 1.258rem;
+  }
+}
+
+.Nav__link {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -0.25em;
+    height: 0.1em;
+    width: 100%;
+    background-color: var(--bg);
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.35s ease-out;
+    transform-origin: 100% 0%;
+  }
+  &:hover {
+    // text-decoration: underline;
+    // text-underline-offset: 0.25em;
+    &::after {
+      transform: scaleX(1);
+      transform-origin: 0% 0%;
+    }
+  }
+  &.active {
+    // text-decoration: underline;
+    // text-underline-offset: 0.25em;
+    &::after {
+      transform: scaleX(1);
+      transform-origin: 0% 0%;
+    }
+  }
+  @include media("<phone") {
+    display: none;
+  }
+}
+.Nav__cta {
+  @extend %watch;
+  @include media("<phone") {
+    display: none;
+  }
+}
+
+.Nav__search {
+  width: 2.4rem;
+  height: 2.4rem;
+  filter: invert(1);
+  transform: scale(1.25);
+  margin-left: -1.2rem;
+  cursor: pointer;
+  @include media("<phone") {
+    width: 2.157rem;
+    height: 2.157rem;
+    transform: unset;
+    margin-left: unset;
+  }
+}
+
+.Nav__user {
+  width: 2.4rem;
+  height: 2.4rem;
+  transform: scale(1.25);
+  margin-left: -1.2rem;
+  cursor: pointer;
+  @include media("<phone") {
+    width: 2.157rem;
+    height: 2.157rem;
+    transform: unset;
+    margin-left: unset;
+  }
+}
+
+.Nav__ham {
+  width: 2.4rem;
+  height: 2.4rem;
+  filter: invert(1);
+  transform: scale(1.25);
+  margin-left: -1.2rem;
+  cursor: pointer;
+  display: none;
+  @include media("<phone") {
+    width: 2.157rem;
+    height: 2.157rem;
+    transform: unset;
+    margin-left: unset;
+    display: block;
+  }
+}
+
+.header__nav {
+  position: fixed;
+  z-index: 30;
+  width: 0.65rem;
+  height: 7vh;
+  background: #00000099;
+  right: 0.5rem;
+  top: 1vh;
+  border-radius: 4rem;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  [data-template="contact"] & {
+    display: none;
+  }
+}
+
+.header__nav__track {
+  position: fixed;
+  width: 1.65rem;
+  height: 100vh;
+  cursor: grab;
+  right: 0rem;
+  top: 1vh;
+  border-radius: 4rem;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 100;
+
+  @include media("<phone") {
+    display: none;
+  }
+
+  &:hover + aside {
+    opacity: 1;
+  }
+
+  &.active {
+    cursor: grabbing;
+  }
+
+  &.active + aside {
+    width: 0.72rem;
+  }
+}
+
+// .lenis-scrolling .header__nav {
+//   opacity: 1;
+// }
+
+.NavLite {
+  padding-inline: 12rem;
+  font-family: "Nohemi";
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 99.01%;
+  letter-spacing: -0.02em;
+  color: #090908;
+  font-weight: 600;
+  text-transform: capitalize;
+  a {
+    font-weight: 500;
+    color: #c4c4c4;
+  }
+
+  @include media("<phone") {
+    display: none;
+  }
+}
+
+.openNav {
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+  width: 37.9rem;
+  // height: 39.1rem;
+  background: #ffffff;
+  border-radius: 1.6rem;
+  padding: 2.2rem 3.1rem 2.4rem 3.1rem;
+  overflow: hidden;
+  * {
+    position: relative;
+  }
+  @include media("<phone") {
+    width: 35.7rem;
+    right: 1.65rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 0rem;
+    top: 8.9rem;
+    border: 0.1rem solid #f5f5f5;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 0rem;
+    bottom: 6.4rem;
+    border: 0.1rem solid #f5f5f5;
+  }
+
+  .openNav__details {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+
+    figure {
+      width: 4.8rem;
+      height: 4.8rem;
+      background: #f8a519;
+      border-radius: 6.336rem;
+      display: grid;
+      place-content: center;
+      font-family: "Nohemi";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2.28923rem;
+      line-height: 99.01%;
+      leading-trim: both;
+      text-edge: cap;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+
+    h3 {
+      font-family: "Nohemi";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 99.01%;
+      letter-spacing: -0.02em;
+      color: #090908;
+    }
+
+    h4 {
+      font-family: "Euclid Circular A";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.3rem;
+      line-height: 1.6rem;
+      letter-spacing: -0.02em;
+      color: #2e2e2e;
+    }
+  }
+
+  .openNav__nav {
+    margin: 3.2rem -0.9rem 4rem;
+    display: grid;
+    gap: 1.2rem;
+
+    a {
+      display: flex;
+      font-family: "Nohemi";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      font-feature-settings: "zero" on;
+      color: #000000;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1rem 0.9rem;
+      border-radius: 0.8rem;
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+
+    svg:nth-of-type(1) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    svg:nth-of-type(2) {
+      width: 2.4rem * 0.75;
+      height: 2.4rem * 0.75;
+      margin-left: auto;
+    }
+  }
+
+  .openNav__exit {
+    display: grid;
+    gap: 3.2rem;
+
+    a {
+      display: flex;
+      font-family: "Nohemi";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      font-feature-settings: "zero" on;
+      color: #b00000;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    svg:nth-of-type(1) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    svg:nth-of-type(2) {
+      width: 2.4rem * 0.75;
+      height: 2.4rem * 0.75;
+      margin-left: auto;
+    }
+  }
+}
+
+.openDetails__close {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

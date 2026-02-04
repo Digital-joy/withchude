@@ -1,0 +1,40 @@
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Tailwind’s “gap-3” equals 0.75rem */
+
+  button {
+    @extend %watch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem; /* w-10 */
+    height: 2.5rem; /* h-10 */
+    border-radius: 5px; /* rounded-[5px] */
+    background-color: #f8a519; /* bg-gray-2 */
+    color: black; /* text-dark */
+    transition: all 0.2s ease-out; /* duration-200 + ease-out */
+
+    &:hover {
+      background-color: #f8a519;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem; // w-20 → 20 × 0.25rem
+    height: 2.5rem; // h-10 → 10 × 0.25rem
+    border-radius: 5px; // rounded-[5px]
+    border: 1px solid rgb(209 213 219);
+    background-color: #fff; // or $white if you have it
+    font-weight: 500; // font-medium
+    color: black;
+  }
+}

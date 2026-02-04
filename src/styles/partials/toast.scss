@@ -1,0 +1,7 @@
+.global-toast {
+    @extend .toast;
+
+    button {
+        background: transparent;
+    }
+}

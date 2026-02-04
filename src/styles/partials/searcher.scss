@@ -1,0 +1,41 @@
+.Searcher {
+  margin-inline: auto;
+  width: 120rem;
+  height: 5.3rem;
+  background: #ffffff;
+  border-radius: 5.5rem;
+  padding: 1.45rem 1.9rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  @include media("<phone") {
+    width: 35.7rem;
+  }
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    @include media("<phone") {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  input {
+    font-family: "Euclid Circular A";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 105.26%;
+    letter-spacing: -0.02em;
+    color: #090908;
+    border: unset;
+    width: 100%;
+    &:placeholder-shown {
+      color: #c4c4c4;
+    }
+    @include media("<phone") {
+      font-size: 1.4rem;
+    }
+  }
+}
