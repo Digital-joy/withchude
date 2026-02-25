@@ -22,8 +22,8 @@ export default function Eventi({
     window.$scroll = new Scroll("blog");
 
     if (documents.length) {
-      const uid2 = "the-joy-retreat";
-      const uid3 = "chudes-hdsml-toronto-book-launch";
+      const uid3 = "the-joy-retreat";
+      const uid2 = "chudes-hdsml-toronto-book-launch";
       const uid1 = "hdsml-city-tours";
       const sortedPages = documents.sort(
         (a, b) =>

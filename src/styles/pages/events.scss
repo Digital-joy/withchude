@@ -32,7 +32,7 @@
     font-family: "Euclid Circular A";
     white-space: pre-line;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: 2.1rem;
     line-height: 135.94%;
     leading-trim: both;
     text-edge: cap;
@@ -42,7 +42,7 @@
     max-width: 110.9rem;
     @include media("<phone") {
       margin: 1.6rem 0;
-      font-size: 1.4rem;
+      font-size: 1.8rem;
     }
   }
 }
@@ -185,8 +185,8 @@
     font-family: "Euclid Circular A";
     font-style: normal;
     font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 2.2rem;
+    font-size: 2.1rem;
+    line-height: 120%;
     leading-trim: both;
     text-edge: cap;
     letter-spacing: -0.02em;
@@ -195,8 +195,18 @@
     margin-left: 2rem;
     @include media("<phone") {
       width: 27.9rem;
-      font-size: 1.4rem;
-      line-height: 1.36;
+      font-size: 1.8rem;
+      // line-height: 1.36rem;
+    }
+
+    strong {
+      font-size: 2.8rem;
+      line-height: 100%;
+
+    @include media("<phone") {
+      font-size: 2.4rem;
+    }
+
     }
   }
 
